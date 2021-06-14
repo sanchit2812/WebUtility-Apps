@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Base Converter</title>
+    <link rel="stylesheet" href="index.css">
+    <script>
+        window.onload = ()=>{
+
+            const binary = document.querySelector("#binary-input-id");
+            const decimal = document.querySelector("#decimal-input-id");
+            const hexa = document.querySelector("#hexa-output-id");
+            const octal = document.querySelector("#octal-output-id");
+
+            binary.oninput = event=>{
+                decimal.value = parseInt(binary.value, 2);
+                hexa.value = parseInt(binary.value, 2).toString(16);
+                octal.value = parseInt(binary.value, 2).toString(8);
+            };
+
+            decimal.oninput = event=>{
+                binary.value = Number(decimal.value).toString(2);
+                hexa.value = Number(decimal.value).toString(16);
+                octal.value = Number(decimal.value).toString(8);
+            };
+
+            hexa.oninput = event=>{
+                binary.value = parseInt(hexa.value, 16).toString(2);
+                decimal.value = parseInt(hexa.value, 16);
+                octal.value = parseInt(hexa.value, 16).toString(8);
+            };
+
+            octal.oninput = event=>{
+                binary.value = parseInt(octal.value, 8).toString(2);
+                decimal.value =  parseInt(octal.value, 8);
+                hexa.value =  parseInt(octal.value, 8).toString(16);
+            };
+
+        };
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Lato:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body class="index-body" style="font-family: 'Arvo', serif;">
+
+    <header class="header-class" >
+        <section class="header-section-class">
+            
+            <div class="navbar">
+                <a href="index.html">Home</a>
+                <div class="dropdown">
+                  <button class="dropbtn">Encoder/Decoders
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="urlEncoderDecoder.html">URL Encoder/Decoder</a>
+                    <a href="base64EncoderDecoder.html">Base64 Encoder/Decoder</a>
+                    <a href="md5hashgenerator.html">MD5 Hash Generator</a>
+                    <a href="sha1hashgenerator.html">SHA-1 Hash Generator</a>
+                    <a href="sha256hashgenerator.html">SHA-256 Hash Generator</a>
+                    <a href="sha512hashgenerator.html">SHA-512 Hash Generator</a>
+                  </div>
+                </div>
+                
+                <div class="dropdown">
+                    <button class="dropbtn">RGB/HEX
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="rgbHex.html">RGB to HEX Converter</a>
+                      <a href="hexRgb.html">HEX to RGB Converter</a>
+                    </div>
+                  </div>
+                  
+                  <div class="dropdown">
+                    <button class="dropbtn">Timestamp Converter
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="epochtodate.html">Epoch Time to Human Date</a>
+                      <a href="datetoepoch.html">Human Date to Epoch Time</a>
+                    </div>
+                  </div>
+    
+                  <a href="unitConverter.html">Unit Converter</a>
+                  <a href="numberBaseConverter.html">Number Base Converter</a>
+                  <a href="stringTools.html">String Tools</a>
+              </div>
+    
+        </section>
+    </header>
+    
+    
+<main class="container">
+
+    <div class="flex-box-container-3">
+        <div class="flex-box-container-3innerbox">
+            Binary:<br>
+            <input type="text" id="binary-input-id" class="rgb-input-class" placeholder="0">
+        </div>
+        <div class="flex-box-container-3innerbox">
+            Decimal:<br>
+            <input type="text" id="decimal-input-id" class="rgb-input-class" placeholder="0">    
+        </div>
+        <div class="flex-box-container-3innerbox">
+            Octal:<br>
+            <input type="text" id="octal-output-id" class="rgb-input-class" placeholder="0">    
+        </div>
+        <div class="flex-box-container-3innerbox">
+            Hexadecimal:<br>
+            <input type="text" id="hexa-output-id" class="rgb-input-class" placeholder="0">    
+        </div>
+    </div>        
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</main>
+
+<footer class="footer-class">
+  <p>Copyright &copy; 2021 Sanchit's Tools.</p>
+</footer>
+
+</body>
+</html>

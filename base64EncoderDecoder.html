@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base64 Encoder/Decoder</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="/base64EncoderDecoder.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Lato:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body class="index-body" style="font-family: 'Arvo', serif;">
+
+    <header class="header-class" >
+        <section class="header-section-class">
+            
+            <div class="navbar">
+                <a href="index.html">Home</a>
+                <div class="dropdown">
+                  <button class="dropbtn">Encoder/Decoders
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="urlEncoderDecoder.html">URL Encoder/Decoder</a>
+                    <a href="base64EncoderDecoder.html">Base64 Encoder/Decoder</a>
+                    <a href="md5hashgenerator.html">MD5 Hash Generator</a>
+                    <a href="sha1hashgenerator.html">SHA-1 Hash Generator</a>
+                    <a href="sha256hashgenerator.html">SHA-256 Hash Generator</a>
+                    <a href="sha512hashgenerator.html">SHA-512 Hash Generator</a>
+                  </div>
+                </div>
+                
+                <div class="dropdown">
+                    <button class="dropbtn">RGB/HEX
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="rgbHex.html">RGB to HEX Converter</a>
+                      <a href="hexRgb.html">HEX to RGB Converter</a>
+                    </div>
+                  </div>
+                  
+                  <div class="dropdown">
+                    <button class="dropbtn">Timestamp Converter
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="epochtodate.html">Epoch Time to Human Date</a>
+                      <a href="datetoepoch.html">Human Date to Epoch Time</a>
+                    </div>
+                  </div>
+    
+                  <a href="unitConverter.html">Unit Converter</a>
+                  <a href="numberBaseConverter.html">Number Base Converter</a>
+                  <a href="stringTools.html">String Tools</a>
+              </div>
+    
+        </section>
+    </header>
+    
+    
+<main class="container">
+<h2>Base64 Encode/Decode</h2>
+    <div class="flex-box-container-2">
+        <input type="text" id="base64-input-id" class="url-input-class" placeholder="Enter a string like : Sanchit's Tools are cool!" >
+        <input type="text" id="base64-output-id" class="url-input-class" >    
+    </div>        
+    <br>
+    <input type="button" id="base64-encode-button-id" class="button-class" value="Encode">
+    <input type="button" id="base64-decode-button-id" class="button-class" value="Decode">
+
+
+    <br><br>
+    <h2>Base64 (MIME) Encode & Decode Tool</h2>
+    Use this free tool to turn binary data into text (encode) or text into binary (decode). To allow binary data to be transmitted with textual data it must be encoded. An example of this is an attachment in an email. This is done via the MIME implementation of Base64. The MIME implementation uses the characters A-Z, a-z, and 0-9 for the initial 62 values that it can use to encode data.<br>
+    For example, the text:<br><br>
+    <b>Sanchit's Tools are cool!</b><br><br>
+    Would be encoded as...<br><br>
+  <b>U2FuY2hpdCdzIFRvb2xzIGFyZSBjb29sIQ==</b><br><br>
+
+    <h3>What is Base64 encoding?</h3>
+    The term Base 64 is generic, and there are many implementations. MIME, which stands for Multi-Purpose Internet Mail Extensions, is the most common that is seen today. It is used to transmit attachments via email over the Simple Mail Transfer Protocol (SMTP). Other examples of Base64 encoding are Radix-64 and YUI's Y64. Encoding data in Base64 results in it taking up roughly 33% more space than the original data.<br><br>
+    MIME Base64 encoding is the most common, and is based on the RFC 1420 specification. It also uses a = character at the end of a string to signify whether the last character is a single or double byte.
+
+    <h3>When and why would you use Base64 encoding?</h3>
+    You should use Base64 whenever you intend to transmit binary data in a textual format.<br><br><br>
+
+</main>
+
+<footer class="footer-class">
+  <p>Copyright &copy; 2021 Sanchit's Tools.</p>
+</footer>
+
+</body>
+</html>

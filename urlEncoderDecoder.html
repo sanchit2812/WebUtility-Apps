@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Encoder/Decoder</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="/encoderDecoder.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Lato:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body class="index-body" style="font-family: 'Arvo', serif;">
+
+    <header class="header-class" >
+        <section class="header-section-class">
+            
+            <div class="navbar">
+                <a href="index.html">Home</a>
+                <div class="dropdown">
+                  <button class="dropbtn">Encoder/Decoders
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="urlEncoderDecoder.html">URL Encoder/Decoder</a>
+                    <a href="base64EncoderDecoder.html">Base64 Encoder/Decoder</a>
+                    <a href="md5hashgenerator.html">MD5 Hash Generator</a>
+                    <a href="sha1hashgenerator.html">SHA-1 Hash Generator</a>
+                    <a href="sha256hashgenerator.html">SHA-256 Hash Generator</a>
+                    <a href="sha512hashgenerator.html">SHA-512 Hash Generator</a>
+                  </div>
+                </div>
+                
+                <div class="dropdown">
+                    <button class="dropbtn">RGB/HEX
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="rgbHex.html">RGB to HEX Converter</a>
+                      <a href="hexRgb.html">HEX to RGB Converter</a>
+                    </div>
+                  </div>
+                  
+                  <div class="dropdown">
+                    <button class="dropbtn">Timestamp Converter
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="epochtodate.html">Epoch Time to Human Date</a>
+                      <a href="datetoepoch.html">Human Date to Epoch Time</a>
+                    </div>
+                  </div>
+    
+                  <a href="unitConverter.html">Unit Converter</a>
+                  <a href="numberBaseConverter.html">Number Base Converter</a>
+                  <a href="stringTools.html">String Tools</a>
+              </div>
+    
+        </section>
+    </header>
+    
+    
+<main class="container">
+<h2>URL Encode/Decode</h2>
+    <div class="flex-box-container-2">
+        <input type="text" id="url-input-id" class="url-input-class" placeholder="Enter a valid URL like : https://google.com" >
+        <input type="text" id="url-output-id" class="url-input-class" >    
+    </div>        
+    <br>
+    <input type="button" id="url-encode-button-id" class="button-class" value="Encode">
+    <input type="button" id="url-decode-button-id" class="button-class" value="Decode">
+
+    <br>
+  <br>
+  <h2>URL Encode and Decode Tool</h2>
+  Use the online tool from above to either encode or decode a string of text. For worldwide interoperability, URIs have to be encoded uniformly. To map the wide range of characters used worldwide into the 60 or so allowed characters in a URI, a two-step process is used:<br><br>
+    <li>Convert the character string into a sequence of bytes using the UTF-8 encoding</li>
+    <li>Convert each byte that is not an ASCII letter or digit to %HH, where HH is the hexadecimal value of the byteConvert the character string into a sequence of bytes using the UTF-8 encoding</li>
+    <br><br>
+    For example, the string: François ,would be encoded as: Fran%C3%A7ois
+    <br>
+    (The "ç" is encoded in UTF-8 as two bytes C3 (hex) and A7 (hex), which are then written as the three characters "%c3" and "%a7" respectively.) This can make a URI rather long (up to 9 ASCII characters for a single Unicode character), but the intention is that browsers only need to display the decoded form, and many protocols can send UTF-8 without the %HH escaping.
+    <br><br>
+    <h2>What is URL encoding?</h2>
+    URL encoding stands for encoding certain characters in a URL by replacing them with one or more character triplets that consist of the percent character "%" followed by two hexadecimal digits. The two hexadecimal digits of the triplet(s) represent the numeric value of the replaced character.<br><br>
+    The term URL encoding is a bit inexact because the encoding procedure is not limited to URLs (Uniform Resource Locators), but can also be applied to any other URIs (Uniform Resource Identifiers) such as URNs (Uniform Resource Names). Therefore, the term percent-encoding should be preferred.
+
+</main>
+
+
+<footer class="footer-class">
+  <p>Copyright &copy; 2021 Sanchit's Tools.</p>
+</footer>
+
+</body>
+</html>

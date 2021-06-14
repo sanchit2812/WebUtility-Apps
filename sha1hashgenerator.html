@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHA-1 Hash Generator</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha1/0.6.0/sha1.min.js"></script>
+    
+    <script>    
+        window.onload = ()=>{
+        const sha1input = document.querySelector("#sha1-input-id");
+        const sha1output = document.querySelector("#sha1-output-id");
+        const sha1generatebtn = document.querySelector("#sha1-encode-button-id");
+
+            sha1generatebtn.onclick = event =>{
+                sha1output.value = sha1(sha1input.value);
+            };
+        }; 
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Lato:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body class="index-body" style="font-family: 'Arvo', serif;">
+
+    <header class="header-class" >
+        <section class="header-section-class">
+            
+            <div class="navbar">
+                <a href="index.html">Home</a>
+                <div class="dropdown">
+                  <button class="dropbtn">Encoder/Decoders
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="urlEncoderDecoder.html">URL Encoder/Decoder</a>
+                    <a href="base64EncoderDecoder.html">Base64 Encoder/Decoder</a>
+                    <a href="md5hashgenerator.html">MD5 Hash Generator</a>
+                    <a href="sha1hashgenerator.html">SHA-1 Hash Generator</a>
+                    <a href="sha256hashgenerator.html">SHA-256 Hash Generator</a>
+                    <a href="sha512hashgenerator.html">SHA-512 Hash Generator</a>
+                  </div>
+                </div>
+                
+                <div class="dropdown">
+                    <button class="dropbtn">RGB/HEX
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="rgbHex.html">RGB to HEX Converter</a>
+                      <a href="hexRgb.html">HEX to RGB Converter</a>
+                    </div>
+                  </div>
+                  
+                  <div class="dropdown">
+                    <button class="dropbtn">Timestamp Converter
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="epochtodate.html">Epoch Time to Human Date</a>
+                      <a href="datetoepoch.html">Human Date to Epoch Time</a>
+                    </div>
+                  </div>
+    
+                  <a href="unitConverter.html">Unit Converter</a>
+                  <a href="numberBaseConverter.html">Number Base Converter</a>
+                  <a href="stringTools.html">String Tools</a>
+              </div>
+    
+        </section>
+    </header>
+    
+    
+<main class="container">
+  <h2>SHA-1 Hash Generator</h2>
+    <div class="flex-box-container-2">
+        <input type="text" id="sha1-input-id" class="url-input-class" placeholder="Enter a string like : Sanchit's Tools are cool!" >
+        <input type="text" id="sha1-output-id" class="url-input-class" >    
+    </div>        
+    <br>
+    <input type="button" id="sha1-encode-button-id" class="button-class" value="Generate">
+<br><br>
+This online tool allows you to generate the SHA1 hash from any string. SHA1 is more secure than MD5. You can generate the sha1 checksum of your files to verify the identity of them later, or generate the SHA1 hashes of your users' passwords to prevent them from being leaked.<br><br>
+</main>
+
+<footer class="footer-class">
+  <p>Copyright &copy; 2021 Sanchit's Tools.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB to HEX </title>
+    <link rel="stylesheet" href="index.css">
+    <script>
+        window.onload = ()=>{
+
+            const redinput = document.querySelector("#red-input-id");
+            const greeninput = document.querySelector("#green-output-id");
+            const blueinput = document.querySelector("#blue-output-id");
+            const btn = document.querySelector("#rgbtohex-button-id");
+            const box = document.querySelector("#color-box-id");
+            const hexoutput = document.querySelector("#hex-output-id");
+
+            btn.onclick = event =>{
+                hexoutput.value = RGBToHex(redinput.value, greeninput.value, blueinput.value);
+                box.style.backgroundColor = hexoutput.value;
+            };
+            function RGBToHex(r,g,b) {
+                r = Number(r).toString(16);
+                g = Number(g).toString(16);
+                b = Number(b).toString(16);
+  
+                if (r.length == 1)
+                    r = "0" + r;
+                if (g.length == 1)
+                    g = "0" + g;
+                if (b.length == 1)
+                    b = "0" + b;
+                return ("#" + r + g + b).toUpperCase();
+            }
+        };
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Lato:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body class="index-body" style="font-family: 'Arvo', serif;">
+
+    <header class="header-class" >
+        <section class="header-section-class">
+            
+            <div class="navbar">
+                <a href="index.html">Home</a>
+                <div class="dropdown">
+                  <button class="dropbtn">Encoder/Decoders
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="urlEncoderDecoder.html">URL Encoder/Decoder</a>
+                    <a href="base64EncoderDecoder.html">Base64 Encoder/Decoder</a>
+                    <a href="md5hashgenerator.html">MD5 Hash Generator</a>
+                    <a href="sha1hashgenerator.html">SHA-1 Hash Generator</a>
+                    <a href="sha256hashgenerator.html">SHA-256 Hash Generator</a>
+                    <a href="sha512hashgenerator.html">SHA-512 Hash Generator</a>
+                  </div>
+                </div>
+                
+                <div class="dropdown">
+                    <button class="dropbtn">RGB/HEX
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="rgbHex.html">RGB to HEX Converter</a>
+                      <a href="hexRgb.html">HEX to RGB Converter</a>
+                    </div>
+                  </div>
+                  
+                  <div class="dropdown">
+                    <button class="dropbtn">Timestamp Converter
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="epochtodate.html">Epoch Time to Human Date</a>
+                      <a href="datetoepoch.html">Human Date to Epoch Time</a>
+                    </div>
+                  </div>
+    
+                  <a href="unitConverter.html">Unit Converter</a>
+                  <a href="numberBaseConverter.html">Number Base Converter</a>
+                  <a href="stringTools.html">String Tools</a>
+              </div>
+    
+        </section>
+    </header>
+    
+    
+<main class="container">
+    <h2>RGB to HEX converter</h2>
+    <div class="flex-box-container-3">
+        <div class="flex-box-container-3innerbox">
+            Red:<br>
+            <input type="text" id="red-input-id" class="rgb-input-class" placeholder="0-255">
+        </div>
+        
+        <div class="flex-box-container-3innerbox">
+            Green:<br>
+            <input type="text" id="green-output-id" class="rgb-input-class" placeholder="0-255">    
+        </div>
+        <div class="flex-box-container-3innerbox">
+            Blue:<br>
+            <input type="text" id="blue-output-id" class="rgb-input-class" placeholder="0-255">    
+        </div>
+        <div class="flex-box-container-3innerbox">
+            Hex:<br>
+            <input type="text" id="hex-output-id" class="rgb-input-class" placeholder="#000000">    
+        </div>
+    </div>        
+    <br>
+    <input type="button" id="rgbtohex-button-id" class="button-class" value="Generate">
+
+    <div id = "color-box-id" style="min-height: 100px; width: 128px; margin-left: 3px; border: 1px solid black;"></div>
+
+    <br><br><br>
+    <h2>What does this RGB to Hex converter do?</h2>
+    It takes input in the form of values for Red, Green and Blue ranging from 0 to 255 and then converts those values to a hexadecimal string that can be used to specify color in html/css code. Photo editing software usually represents color in RGB and therefore if you would like to use the colors you use in your photo editing software as the background of your html element then you will have to get the hexadecimal representation of the RGB values. This tool allows you to get those values.
+
+</main>
+
+<footer class="footer-class">
+    <p>Copyright &copy; 2021 Sanchit's Tools.</p>
+</footer>
+
+</body>
+</html>
