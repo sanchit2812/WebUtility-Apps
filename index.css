@@ -221,3 +221,21 @@ a:hover {
   .dropdown:hover .dropdown-content {
     display: block;
   }
+
+
+  
+  @media screen and (max-width: 900px){
+    .flex-box-container{
+        
+        display: flex;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        flex-direction: column;
+    }
+    .flex-box-container-rgb{
+        display: flex;
+        padding-bottom: 40px;
+        flex-direction: column;
+    }
+  }
+  
