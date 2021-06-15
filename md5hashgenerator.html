@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MD5 Hash Generator</title>
     <link rel="stylesheet" href="index.css">
-    <script src="http://www.myersdaily.org/joseph/javascript/md5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+
     
     <script>
         window.onload = ()=>{
@@ -16,16 +17,18 @@
         const md5generatebtn = document.querySelector("#md5-encode-button-id");
 
             md5generatebtn.onclick = event =>{
-                md5output.value = md5(md5input.value);
+              const hash = CryptoJS.MD5(md5input.value);
+                md5output.value = hash.toString(CryptoJS.enc.Hex);
             };
         }; 
     </script>
 
 
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Arvo&family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Lato:wght@300&display=swap" rel="stylesheet">
 
 </head>
+
 <body class="index-body" style="font-family: 'Arvo', serif;">
 
     <header class="header-class" >
