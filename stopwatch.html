@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Base64 Encoder/Decoder</title>
+    <title>Stopwatch </title>
     <link rel="stylesheet" href="index.css">
-    <script src="/base64EncoderDecoder.js"></script>
+    <script src="/extra.js"></script>
+    <script>
+        console.log("In file a");
+    </script>
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Lato:wght@300&display=swap" rel="stylesheet">
 
@@ -63,36 +67,55 @@
           </div>
 
     </section>
-</header>
-    
+</header>    
     
 <main class="container">
-<h2>Base64 Encode/Decode</h2>
-    <div class="flex-box-container-2">
-        <input type="text" id="base64-input-id" class="url-input-class" placeholder="Enter a string like : Sanchit's Tools are cool!" >
-        <input type="text" id="base64-output-id" class="url-input-class" >    
-    </div>        
+  <h3>Stopwatch Timer Tool</h3>
+
+
+    <!-- <div class="flex-box-container-3">
+        <div class="flex-box-container-3innerbox">
+            Year:   
+            <input type="number" id="year-input-id" class="date-input-class" placeholder="2021">
+            Month:
+            <input type="number" id="month-input-id" class="date-input-class" placeholder="1-12">
+            Day:
+            <input type="number" id="day-input-id" class="date-input-class" placeholder="1-31">
+            Hour(24 hour):
+            <input type="number" id="hour-input-id" class="date-input-class" placeholder="1-24">
+            Minutes:
+            <input type="number" id="minute-input-id" class="date-input-class" placeholder="1-59">
+            Seconds:
+            <input type="number" id="second-input-id" class="date-input-class" placeholder="1-59">
+        </div>
+    </div>         -->
+
     <br>
-    <input type="button" id="base64-encode-button-id" class="button-class" value="Encode">
-    <input type="button" id="base64-decode-button-id" class="button-class" value="Decode">
+    <div class="stopwatch">
+        <span id = "hour" class="written-text">00</span>
+        <span class="written-text">:</span>
+        <span id = "minute" class="written-text">00</span>
+        <span class="written-text">:</span>
+        <span id = "second" class="written-text">00</span>
+    </div>
 
-
-    <br><br>
-    <h2>Base64 (MIME) Encode & Decode Tool</h2>
-    Use this free tool to turn binary data into text (encode) or text into binary (decode). To allow binary data to be transmitted with textual data it must be encoded. An example of this is an attachment in an email. This is done via the MIME implementation of Base64. The MIME implementation uses the characters A-Z, a-z, and 0-9 for the initial 62 values that it can use to encode data.<br>
-    For example, the text:<br><br>
-    <b>Sanchit's Tools are cool!</b><br><br>
-    Would be encoded as...<br><br>
-  <b>U2FuY2hpdCdzIFRvb2xzIGFyZSBjb29sIQ==</b><br><br>
-
-    <h3>What is Base64 encoding?</h3>
-    The term Base 64 is generic, and there are many implementations. MIME, which stands for Multi-Purpose Internet Mail Extensions, is the most common that is seen today. It is used to transmit attachments via email over the Simple Mail Transfer Protocol (SMTP). Other examples of Base64 encoding are Radix-64 and YUI's Y64. Encoding data in Base64 results in it taking up roughly 33% more space than the original data.<br><br>
-    MIME Base64 encoding is the most common, and is based on the RFC 1420 specification. It also uses a = character at the end of a string to signify whether the last character is a single or double byte.
-
-    <h3>When and why would you use Base64 encoding?</h3>
-    You should use Base64 whenever you intend to transmit binary data in a textual format.<br><br><br>
-
+    <br>
+    <br>
+    <div class="flex-box-container-4">
+        <input type="button" id="stoptwatch-start-button-id" class="button-class" value="start">
+        <input type="button" id="stoptwatch-pause-button-id" class="button-class" value="pause">
+        <input type="button" id="stoptwatch-reset-button-id" class="button-class" value="reset">
+    </div>   
+    <br>
+    <br>
+    
+    
+    <br><br><br><br>
+    <h3>How does online stopwatch tool work?</h3>
+    The online stopwatch counts the time to the millisecond that passes after you click the "Start" button. Click the "Start", "Pause" or "Stop" buttons to start, to pause or stop the stopwatch.     
+    <br><br><br><br><br>
 </main>
+
 
 <footer class="footer-class">
   <p>Copyright &copy; 2021 Sanchit's Tools.</p>
